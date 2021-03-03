@@ -1,23 +1,16 @@
-class Person {
-    protected name: string;
-    protected constructor(theName: string) {
-        this.name = "test";
-    }
-}
 
 // Employee can extend Person
-class Employee extends Person {
+export class Employee {
+    protected name: string;
     private department: string;
 
     constructor(name: string, department: string) {
-        super(name);
+        this.name = name;
         this.department = department;
     }
 
     public getElevatorPitch() {
         return `Hello, my name is ${this.name} and I work in ${this.department}.`;
     }
-}
 
-let howard = new Employee("Howard", "Sales");
-export const person = Person;
+}
